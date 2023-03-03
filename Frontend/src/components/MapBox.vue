@@ -34,6 +34,7 @@ export default {
           el.style.width = "40px";
           el.style.height = "40px";
           el.style.border = "solid 1px red"
+          el.style.borderRadius ="15%"
           estadoSeleccion = true
         }
         else {
@@ -48,23 +49,24 @@ export default {
         marker.addTo(this.$store.state.map);
 
         marker.getElement().addEventListener("click", () => {
-
+          
           this.$store.state.estadoInfoEdificio = true
           this.$store.state.edificioSelecionado = e
           console.log(this.$store.state.edificioSelecionado )
+          
           this.$router.push({ path: '/' })
           
         });
         if (!estadoSeleccion) {
 
-          marker.getElement().addEventListener("mouseover", () => {
+         /*  marker.getElement().addEventListener("mouseover", () => {
             marker.getElement().style.width = "60px";
             marker.getElement().style.height = "60px";
             marker.getElement().style.transition = "0.5s";
             //marker.getElement().style.border = "2px solid #ED0C60";
 
 
-          });
+          }); */
 
           marker.getElement().addEventListener("mouseleave", () => {
             marker.getElement().style.width = "35px";
@@ -112,6 +114,7 @@ export default {
 
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
 }
 </style>

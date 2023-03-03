@@ -10,7 +10,7 @@
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
-    "firebase": "^9.9.1",
+    "firebase": "^9.17.2",
     "mapbox-gl": "^2.9.2",
     "material-icons": "^1.11.8",
     "pinia": "^2.0.17",

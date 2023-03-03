@@ -1,10 +1,13 @@
 <template>
   <div class="contenedor">
     
-    <!-- <BuscarSala/> -->
+    <div v-if="!this.$store.state.estadoInfoEdificio">
+      <BuscarSala/>
+    </div>
+    
     
     <MapBox/>
-    <div v-if="$store.state.estadoInfoEdificio">
+    <div v-if="this.$store.state.estadoInfoEdificio">
       <InfoEdificio/>
     </div>
     

@@ -8,10 +8,7 @@
       @mouseleave="active=0"
     
       >
-      <span @click="seleccionar" class="material-icons-outlined">
-          search
-      </span>
-
+      
       <div class="barraBuscar">
 
       
@@ -31,9 +28,10 @@
       </vs-select>
       </div>
 
-      <span @click="value=''" id="close" class="material-icons-outlined">
-        close
+      <span @click="seleccionar" class="material-icons-outlined">
+          search
       </span>
+
       
     </vs-button>
     </div>
@@ -68,6 +66,7 @@
 <style scoped>
 .buscar{
     position: absolute;
+    overflow: hidden;
 }
 .vs-button{
   height: 50px;
